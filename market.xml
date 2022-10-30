@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<market_descriptions response_code="OK">
+    <market id="123" name="market id 123" groups="aa|bb|cc">
+        <outcomes>
+            <outcome id="1" name="outcome 1 name" />
+            <outcome id="2" name="outcome 2 name" />
+        </outcomes>
+    </market>
+    <market id="456" name="market id 456" groups="aa|bb|cc">
+        <outcomes>
+            <outcome id="1" name="outcome 1 name" />
+            <outcome id="2" name="outcome 2 name" />
+            <outcome id="3" name="outcome 3 name" />
+        </outcomes>
+    </market>
+    <market id="789" name="market id 789" groups="aa|bb|cc">
+        <outcomes>
+            <outcome id="1" name="outcome 1 name" />
+            <outcome id="2" name="outcome 2 name" />
+            <outcome id="3" name="outcome 3 name" />
+        </outcomes>
+    </market>
+</market_descriptions>
