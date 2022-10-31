@@ -11,21 +11,13 @@ import (
 )
 
 func main() {
-	// f := excelize.NewFile()
 
-	// @@@@@ 如需要，請更改此觸 @@@@@
-	// // 開啟檔案
 	fileName := "market.xml"
-	xmlFile, err := os.Open(fileName)
+
+	byteValue, err := readXmlFile(fileName)
 	if err != nil {
-		fmt.Println(err)
+		log.Println("here is err:", err)
 	}
-
-	// 關閉檔案
-	defer xmlFile.Close()
-
-	// 讀檔
-	byteValue, _ := ioutil.ReadAll(xmlFile)
 
 	// @@@@@ 如需要，請更改此觸 @@@@@
 	// 宣告一個根據 xml 結構的型別變數
@@ -48,4 +40,16 @@ func main() {
 	sort.SliceStable(ss, func(i, j int) bool {
 		return ss[i] < ss[j]
 	})
+}
+
+func readXmlFile(fileName string) (data []byte, err error) {
+	xmlFile, err := os.Open(fileName)
+	if err != nil {
+		return []byte{}, err
+	}
+	// 關閉檔案
+	defer xmlFile.Close()
+
+	// 讀檔
+	return ioutil.ReadAll(xmlFile)
 }
